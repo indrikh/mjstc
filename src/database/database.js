@@ -1,9 +1,10 @@
 import { Sequelize, DataTypes, Model } from "sequelize"
+import config from "../../config.js"
 
-const sequelize = new Sequelize('mjstc', 'root', '1111', {
+const sequelize = new Sequelize(config.DB_TABLE_NAME, config.DP_USERNAME, config.DB_USER_PASSWORD, {
     dialect: 'mysql',
-    host: 'localhost',
-    port: '3306',
+    host: config.DB_URL,
+    port: config.DB_PORT,
     logging: false,
 })
 

@@ -25,13 +25,13 @@ const router = new Router()
 router.post('/login', [
     registrationCheck,
     check('username', 'Имя пользователя не может быть пустым').notEmpty(),
-    check('password', 'Пароль не может быть пустым').notEmpty(),
+    check('password', 'Пароль не может быть пустым').notEmpty().isString(),
 ], userController.UserController.login)
 
 router.post('/registration', [
     registrationCheck,
     check('username', 'Имя пользователя не может быть пустым').notEmpty(),
-    check('password', 'Пароль не может быть пустым').notEmpty(),
+    check('password', 'Пароль не может быть пустым').notEmpty().isString(),
 ], userController.UserController.registration)
 
 router.post('/logout', authCheck, userController.UserController.logout)
