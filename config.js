@@ -6,5 +6,5 @@ export default  {
     DB_PORT: '3307',
     DB_TABLE_NAME: 'mjstc',
     DP_USERNAME: 'root',
-    DB_USER_PASSWORD: '2612',
+    DB_USER_PASSWORD: '1111',
 }
