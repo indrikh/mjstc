@@ -1,6 +1,6 @@
 import { Sequelize, DataTypes, Model } from "sequelize"
 
-const sequelize = new Sequelize('mjstc', 'root', '2612', {
+const sequelize = new Sequelize('mjstc', 'root', '1111', {
     dialect: 'mysql',
     host: 'localhost',
     port: '3306',

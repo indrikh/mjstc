@@ -23,42 +23,10 @@ app.use(
 
 app.use('/', router)
 
-const start = async () => {
-    try {
-        
-        app.listen(PORT, () => console.log(`server staeted at ${PORT}`))
-    }
-    catch(e) {
-        console.log(e)
-    }
+const start = () => {
+    app.listen(PORT, () => console.log(`server staeted at ${PORT}`))
 }
 
 start()
 
-// app.get('/', (req, res) => {
-//     req.session.isAuth = true
-//     res.send({res: "hello world"})
-//     console.log(req.sessionID)
-//     res.status(200)
-// })
-
-// const authCheck = (req, res, next) => {
-//     if(!req.session.isAuth) {
-//         res.redirect('/')
-//     } else {
-//         next()
-//     }
-// }
-
-// app.get('/home', authCheck, (req, res) => {
-//     res.send({res: "home"})
-
-// })
-
-// app.post('/registration', (req, res) => {
-//     const {username, password} = req.body
-//     console.log(username)
-//     res.send({res: "hello world"})
-//     res.status(200)
-// })
 
